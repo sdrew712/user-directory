@@ -42,6 +42,7 @@ const Card = ({
           </ol>
         </div>
       </div>
+
       <BottomNav />
     </div>
   );

@@ -31,14 +31,15 @@ code {
 #card-container {
   background-color: #222222;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 6rem;
 }
 
 #card {
   background-color: #ebebeb;
   padding: 2rem 4rem 2rem 4rem;
-  width: 50%;
+  width: 35rem;
   font-weight: 500;
 }
 
@@ -55,4 +56,24 @@ code {
 #movies {
   padding-top: 1rem;
   padding-bottom: 2rem;
+}
+
+nav {
+  padding-top: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 43rem;
+  font-weight: 800;
+}
+
+button {
+  background-color: #34a5da;
+  color: white;
+  border: none;
+  margin: 0 1rem 0 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: 800;
 }

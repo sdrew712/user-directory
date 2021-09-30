@@ -2,8 +2,11 @@ import "./styles.css";
 import TopBar from "./components/TopBar";
 import Card from "./components/Card";
 import data from "./data";
+import { useState } from "react";
 
 function App() {
+  const [user, setUser] = useState(data);
+
   return (
     <>
       <TopBar />
