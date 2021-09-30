@@ -9,8 +9,8 @@ const data = [
     favoriteMovies: [
       "That Night in Varennes (Nuit de Varennes, La)",
       "Spy(ies) (Espion(s))",
-      "Klip (Clip)"
-    ]
+      "Klip (Clip)",
+    ],
   },
   {
     id: 2,
@@ -22,8 +22,8 @@ const data = [
     favoriteMovies: [
       "Camp",
       "Her Highness and the Bellboy",
-      "Mona and the Time of Burning Love (Mona ja palavan rakkauden aika))"
-    ]
+      "Mona and the Time of Burning Love (Mona ja palavan rakkauden aika))",
+    ],
   },
   {
     id: 3,
@@ -35,8 +35,8 @@ const data = [
     favoriteMovies: [
       "Trojan War",
       "Fall of the Republic: The Presidency of Barack H. Obama",
-      "Four Sahibjade"
-    ]
+      "Four Sahibjade",
+    ],
   },
   {
     id: 4,
@@ -48,8 +48,8 @@ const data = [
     favoriteMovies: [
       "84 Charing Cross Road",
       "Summer Place, A",
-      "Dylan Dog: Dead of Night"
-    ]
+      "Dylan Dog: Dead of Night",
+    ],
   },
   {
     id: 5,
@@ -61,8 +61,8 @@ const data = [
     favoriteMovies: [
       "Club Paradise",
       "Return of a Man Called Horse, The",
-      "Stan Helsing"
-    ]
+      "Stan Helsing",
+    ],
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ const data = [
     country: "Lithuania",
     employer: "Npath",
     title: "Programmer Analyst I",
-    favoriteMovies: ["Shinobi: Heart Under Blade", "Where's Poppa?", "Primary"]
+    favoriteMovies: ["Shinobi: Heart Under Blade", "Where's Poppa?", "Primary"],
   },
   {
     id: 7,
@@ -80,7 +80,7 @@ const data = [
     country: "Angola",
     employer: "Voonyx",
     title: "Clinical Specialist",
-    favoriteMovies: ["Rollerball", "Earthquake", "Departures (Okuribito)"]
+    favoriteMovies: ["Rollerball", "Earthquake", "Departures (Okuribito)"],
   },
   {
     id: 8,
@@ -92,8 +92,8 @@ const data = [
     favoriteMovies: [
       "Robinson in Space",
       "Johnny Cash at Folsom Prison",
-      "Svensson, Svensson - I nöd och lust"
-    ]
+      "Svensson, Svensson - I nöd och lust",
+    ],
   },
   {
     id: 9,
@@ -102,7 +102,7 @@ const data = [
     country: "United Kingdom",
     employer: "Skinix",
     title: "Research Associate",
-    favoriteMovies: ["Fathom", "Strange Magic", "Martian Child"]
+    favoriteMovies: ["Fathom", "Strange Magic", "Martian Child"],
   },
   {
     id: 10,
@@ -114,8 +114,8 @@ const data = [
     favoriteMovies: [
       "Popcorn",
       "Redemption: For Robbing the Dead",
-      "Certified Copy (Copie conforme)"
-    ]
+      "Certified Copy (Copie conforme)",
+    ],
   },
   {
     id: 11,
@@ -124,7 +124,7 @@ const data = [
     country: "United States",
     employer: "Gabcube",
     title: "Account Coordinator",
-    favoriteMovies: ["Brother 2 (Brat 2)", "Nacho Libre", "Block-Heads"]
+    favoriteMovies: ["Brother 2 (Brat 2)", "Nacho Libre", "Block-Heads"],
   },
   {
     id: 12,
@@ -133,7 +133,7 @@ const data = [
     country: "Namibia",
     employer: "Rhybox",
     title: "Senior Financial Analyst",
-    favoriteMovies: ["Woman of Antwerp", "Away We Go", "Rooster Cogburn"]
+    favoriteMovies: ["Woman of Antwerp", "Away We Go", "Rooster Cogburn"],
   },
   {
     id: 13,
@@ -142,7 +142,7 @@ const data = [
     country: "Mexico",
     employer: "Devpoint",
     title: "Human Resources Manager",
-    favoriteMovies: ["Caddyshack II", "Mr. Bean's Holiday", "Versailles"]
+    favoriteMovies: ["Caddyshack II", "Mr. Bean's Holiday", "Versailles"],
   },
   {
     id: 14,
@@ -154,8 +154,8 @@ const data = [
     favoriteMovies: [
       "Asoka (Ashoka the Great)",
       "The Case of the Scorpion's Tail",
-      "Never Sleep Again: The Elm Street Legacy"
-    ]
+      "Never Sleep Again: The Elm Street Legacy",
+    ],
   },
   {
     id: 15,
@@ -164,7 +164,7 @@ const data = [
     country: "Portugal",
     employer: null,
     title: null,
-    favoriteMovies: ["Unholy Three, The", "Kabul Express", "All-Star Superman"]
+    favoriteMovies: ["Unholy Three, The", "Kabul Express", "All-Star Superman"],
   },
   {
     id: 16,
@@ -173,7 +173,7 @@ const data = [
     country: "Greece",
     employer: "Zoomlounge",
     title: "Human Resources Manager",
-    favoriteMovies: ["Hot Pepper", "Butley", "Take the High Ground!"]
+    favoriteMovies: ["Hot Pepper", "Butley", "Take the High Ground!"],
   },
   {
     id: 17,
@@ -185,8 +185,8 @@ const data = [
     favoriteMovies: [
       "Babies (Bébé(s))",
       "Father of the Bride Part II",
-      "Les hautes solitudes"
-    ]
+      "Les hautes solitudes",
+    ],
   },
   {
     id: 18,
@@ -195,7 +195,7 @@ const data = [
     country: "Albania",
     employer: "Babbleopia",
     title: "Chemical Engineer",
-    favoriteMovies: ["Choke", "Godard's Passion (Passion)", "Sweet Movie"]
+    favoriteMovies: ["Choke", "Godard's Passion (Passion)", "Sweet Movie"],
   },
   {
     id: 19,
@@ -207,8 +207,8 @@ const data = [
     favoriteMovies: [
       "Not Another Happy Ending",
       "Slipstream",
-      "Shaggy D.A., The"
-    ]
+      "Shaggy D.A., The",
+    ],
   },
   {
     id: 20,
@@ -217,7 +217,7 @@ const data = [
     country: "Philippines",
     employer: "Jabbercube",
     title: "Account Representative II",
-    favoriteMovies: ["My Prairie Home", "Failure to Launch", "Stoker"]
+    favoriteMovies: ["My Prairie Home", "Failure to Launch", "Stoker"],
   },
   {
     id: 21,
@@ -229,8 +229,8 @@ const data = [
     favoriteMovies: [
       "Hold That Ghost",
       "Dorian Blues",
-      "Counterfeit Traitor, The"
-    ]
+      "Counterfeit Traitor, The",
+    ],
   },
   {
     id: 22,
@@ -242,8 +242,8 @@ const data = [
     favoriteMovies: [
       "Kagi (Odd Obsession)",
       "Night and Fog (Nuit et brouillard)",
-      "We're No Angels"
-    ]
+      "We're No Angels",
+    ],
   },
   {
     id: 23,
@@ -255,8 +255,8 @@ const data = [
     favoriteMovies: [
       "Glass Bottom Boat, The",
       "Something for Everyone",
-      "Rurouni Kenshin (Rurôni Kenshin: Meiji kenkaku roman tan)"
-    ]
+      "Rurouni Kenshin (Rurôni Kenshin: Meiji kenkaku roman tan)",
+    ],
   },
   {
     id: 24,
@@ -268,8 +268,8 @@ const data = [
     favoriteMovies: [
       "Seaside (Bord de Mer)",
       "Magic of Belle Isle, The",
-      "Battered Bastards of Baseball, The"
-    ]
+      "Battered Bastards of Baseball, The",
+    ],
   },
   {
     id: 25,
@@ -281,9 +281,9 @@ const data = [
     favoriteMovies: [
       "Book of Love",
       "I Heart Huckabees",
-      "Howard Zinn: You Can't Be Neutral on a Moving Train"
-    ]
-  }
+      "Howard Zinn: You Can't Be Neutral on a Moving Train",
+    ],
+  },
 ];
 
 export default data;

@@ -1,15 +1,15 @@
 import React from "react";
 
-const BottomNav = () => {
+const BottomNav = ({ onNext, onPrev, onEdit, onDelete, onNew }) => {
   return (
     <nav>
-      <span> &lt; Previous </span>
+      <span onClick={onPrev}>{"< Previous"}</span>
       <span>
-        <button>Edit</button>
-        <button>Delete</button>
-        <button>New</button>
+        <button onClick={onEdit}>Edit</button>
+        <button onClick={onDelete}>Delete</button>
+        <button onClick={onNew}>New</button>
       </span>
-      <span>Next &gt;</span>
+      <span onClick={onNext}>{"Next >"}</span>
     </nav>
   );
 };

@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import BottomNav from "./BottomNav";
 
-const Card = ({
-  firstName,
-  lastName,
-  city,
-  country,
-  title,
-  employer,
-  movie1,
-  movie2,
-  movie3,
-}) => {
+const Card = ({ usersData }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex(currentIndex + 1);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex(currentIndex - 1);
+  };
+
+  const { name, city, country, title, employer, favoriteMovies } =
+    usersData[currentIndex];
+  const { first: firstName, last: lastName } = name;
+  const [movie1, movie2, movie3] = favoriteMovies;
+
   return (
     <div id="card-container">
       <div id="card">
@@ -43,7 +48,13 @@ const Card = ({
         </div>
       </div>
 
-      <BottomNav />
+      <BottomNav
+        onPrev={handlePrev}
+        onNext={handleNext}
+        onEdit={() => {}}
+        onDelete={() => {}}
+        onNew={() => {}}
+      />
     </div>
   );
 };
