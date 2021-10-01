@@ -1,6 +1,5 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "User Directory",
   "icons": [
     {
       "src": "favicon.ico",
