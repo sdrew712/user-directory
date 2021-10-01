@@ -6,13 +6,13 @@ const BottomNav = ({
   onEdit,
   onDelete,
   onNew,
-  EditActionText,
+  editActionText,
 }) => {
   return (
     <nav>
       <span onClick={onPrev}>{"< Previous"}</span>
       <span>
-        <button onClick={onEdit}>{EditActionText}</button>
+        <button onClick={onEdit}>{editActionText}</button>
         <button onClick={onDelete}>Delete</button>
         <button onClick={onNew}>New</button>
       </span>
