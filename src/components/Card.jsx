@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import BottomNav from "./BottomNav";
 import Edit from "./Edit";
 
-const Card = ({ usersData }) => {
+const Card = ({ usersData, setUsersData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [editing, setEditing] = useState(false);
 
@@ -22,12 +22,8 @@ const Card = ({ usersData }) => {
     }
   };
 
-  const onEdit = () => {
-    if (editing === false) {
-      setEditing(true);
-    } else if (editing === true) {
-      setEditing(false);
-    }
+  const handleEdit = () => {
+    setEditing(false);
   };
 
   const { name, city, country, title, employer, favoriteMovies } =
@@ -35,16 +31,19 @@ const Card = ({ usersData }) => {
   const { first: firstName, last: lastName } = name;
   const [movie1, movie2, movie3] = favoriteMovies;
 
-  return editing ? (
-    <Edit
-      onEdit={onEdit}
-      usersData={usersData}
-      currentIndex={currentIndex}
-      handlePrev={handlePrev}
-      handleNext={handleNext}
-      editing={editing}
-    />
-  ) : (
+  if (editing) {
+    return (
+      <Edit
+        onEdit={handleEdit}
+        currentUser={usersData[currentIndex]}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        setUsersData={setUsersData}
+      />
+    );
+  }
+
+  return (
     <div id="card-container">
       <div id="card">
         <h1 id="user-name">
@@ -78,10 +77,10 @@ const Card = ({ usersData }) => {
       <BottomNav
         onPrev={handlePrev}
         onNext={handleNext}
-        onEdit={onEdit}
+        onEdit={() => setEditing(true)}
         onDelete={() => {}}
         onNew={() => {}}
-        EditActionText={editing ? "Cancel" : "Edit"}
+        editActionText={"Edit"}
       />
     </div>
   );
