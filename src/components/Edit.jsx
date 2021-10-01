@@ -1,50 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import BottomNav from "./BottomNav";
-import Edit from "./Edit";
 
-const Card = ({ usersData }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [editing, setEditing] = useState(false);
-
-  const handleNext = () => {
-    if (currentIndex < usersData.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      console.log("No more users next!");
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 1) {
-      setCurrentIndex(currentIndex - 1);
-    } else {
-      console.log("No more previous users!");
-    }
-  };
-
-  const onEdit = () => {
-    if (editing === false) {
-      setEditing(true);
-    } else if (editing === true) {
-      setEditing(false);
-    }
-  };
-
+const Edit = ({
+  onEdit,
+  usersData,
+  currentIndex,
+  handlePrev,
+  handleNext,
+  editing,
+}) => {
   const { name, city, country, title, employer, favoriteMovies } =
     usersData[currentIndex];
   const { first: firstName, last: lastName } = name;
   const [movie1, movie2, movie3] = favoriteMovies;
 
-  return editing ? (
-    <Edit
-      onEdit={onEdit}
-      usersData={usersData}
-      currentIndex={currentIndex}
-      handlePrev={handlePrev}
-      handleNext={handleNext}
-      editing={editing}
-    />
-  ) : (
+  return (
     <div id="card-container">
       <div id="card">
         <h1 id="user-name">
@@ -74,7 +44,6 @@ const Card = ({ usersData }) => {
           </ol>
         </div>
       </div>
-
       <BottomNav
         onPrev={handlePrev}
         onNext={handleNext}
@@ -87,4 +56,4 @@ const Card = ({ usersData }) => {
   );
 };
 
-export default Card;
+export default Edit;
