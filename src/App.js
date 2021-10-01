@@ -6,6 +6,7 @@ import { useState } from "react";
 
 function App() {
   const [usersData, setUsersData] = useState(initialData);
+  console.log(usersData);
 
   return (
     <>

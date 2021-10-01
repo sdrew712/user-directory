@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BottomNav from "./BottomNav";
 
 const Edit = ({
@@ -8,14 +8,19 @@ const Edit = ({
   handleNext,
   setUsersData,
 }) => {
-  const { name, city, country, title, employer, favoriteMovies } = currentUser;
-  const { first: firstName, last: lastName } = name;
-  const [movie1, movie2, movie3] = favoriteMovies;
+  const [firstName, setFirstName] = useState(currentUser.name.first);
+  const [lastName, setLastName] = useState(currentUser.name.last);
+  const [city, setCity] = useState(currentUser.city);
+  const [country, setCountry] = useState(currentUser.country);
+  const [title, setTitle] = useState(currentUser.title);
+  const [employer, setEmployer] = useState(currentUser.employer);
+  const [movie1, setMovie1] = useState(currentUser.favoriteMovies[0]);
+  const [movie2, setMovie2] = useState(currentUser.favoriteMovies[1]);
+  const [movie3, setMovie3] = useState(currentUser.favoriteMovies[2]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submitted");
-    console.log(e);
   };
 
   return (
@@ -23,25 +28,57 @@ const Edit = ({
       <form id="card" onSubmit={(e) => handleSubmit(e)}>
         <div className="input">
           <b>Name:</b>
-          <input id="firstname-input" value={firstName}></input>
-          <input id="lastname-input" value={lastName}></input>
+          <input
+            id="firstname-input"
+            value={firstName}
+            onChange={({ target }) => {
+              setFirstName(target.value);
+            }}
+          ></input>
+          <input
+            id="lastname-input"
+            value={lastName}
+            onChange={({ target }) => {
+              setLastName(target.value);
+            }}
+          ></input>
         </div>
 
         <div id="user-info">
           <div className="input">
             <b>From: </b>
-            <input id={city} value={city}></input>
-            <input value={country}></input>
+            <input
+              value={city}
+              onChange={({ target }) => {
+                setCity(target.value);
+              }}
+            ></input>
+            <input
+              value={country}
+              onChange={({ target }) => {
+                setCountry(target.value);
+              }}
+            ></input>
           </div>
 
           <div className="input">
             <b>Job Title: </b>
-            <input value={title}></input>
+            <input
+              value={title}
+              onChange={({ target }) => {
+                setTitle(target.value);
+              }}
+            ></input>
           </div>
 
           <div className="input">
             <b>Employer: </b>
-            <input value={employer}></input>
+            <input
+              value={employer}
+              onChange={({ target }) => {
+                setEmployer(target.value);
+              }}
+            ></input>
           </div>
         </div>
         <div id="movies">
@@ -50,15 +87,30 @@ const Edit = ({
           </div>
           <p className="input">
             1.
-            <input value={movie1}></input>
+            <input
+              value={movie1}
+              onChange={({ target }) => {
+                setMovie1(target.value);
+              }}
+            ></input>
           </p>
           <p className="input">
             2.
-            <input value={movie2}></input>
+            <input
+              value={movie2}
+              onChange={({ target }) => {
+                setMovie2(target.value);
+              }}
+            ></input>
           </p>
           <p className="input">
             3.
-            <input value={movie3}></input>
+            <input
+              value={movie3}
+              onChange={({ target }) => {
+                setMovie3(target.value);
+              }}
+            ></input>
           </p>
         </div>
         <button>Submit</button>
