@@ -16,34 +16,64 @@ const Edit = ({
 
   return (
     <div id="card-container">
-      <div id="card">
-        <h1 id="user-name">
-          {firstName} {lastName}
-        </h1>
+      <form id="card">
+        <div className="input">
+          <b>Name:</b>
+          <textarea
+            id="firstname-input"
+            cols={20}
+            rows={1}
+            placeholder={firstName}
+          ></textarea>
+          <textarea
+            id="lastname-input"
+            cols={20}
+            rows={1}
+            placeholder={lastName}
+          ></textarea>
+        </div>
+
         <div id="user-info">
-          <p>
-            <b>
-              From: {city} {country}
-            </b>
-          </p>
-          <p>
-            <b>Job Title: {title}</b>
-          </p>
-          <p>
-            <b>Employer: {employer}</b>
-          </p>
+          <div className="input">
+            <b>From: </b>
+            <textarea
+              id={city}
+              cols={20}
+              rows={1}
+              placeholder={city}
+            ></textarea>
+            <textarea cols={20} rows={1} placeholder={country}></textarea>
+          </div>
+
+          <div className="input">
+            <b>Job Title: </b>
+            <textarea cols={30} rows={1} placeholder={title}></textarea>
+          </div>
+
+          <div className="input">
+            <b>Employer: </b>
+            <textarea cols={30} rows={1} placeholder={employer}></textarea>
+          </div>
         </div>
         <div id="movies">
-          <p>
+          <div>
             <b>Favorite Movies:</b>
-          </p>
-          <ol>
-            <li>{movie1}</li>
-            <li>{movie2}</li>
-            <li>{movie3}</li>
-          </ol>
+          </div>
+          <li className="input">
+            <p>1.</p>
+            <textarea cols={30} rows={1} placeholder={movie1}></textarea>
+          </li>
+          <li className="input">
+            <p>2.</p>
+            <textarea cols={30} rows={1} placeholder={movie2}></textarea>
+          </li>
+          <li className="input">
+            <p>3.</p>
+            <textarea cols={30} rows={1} placeholder={movie3}></textarea>
+          </li>
         </div>
-      </div>
+        <button>Submit</button>
+      </form>
       <BottomNav
         onPrev={handlePrev}
         onNext={handleNext}

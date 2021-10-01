@@ -55,7 +55,7 @@ code {
 
 #movies {
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 nav {
@@ -76,4 +76,9 @@ button {
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 12px;
   font-weight: 800;
+}
+
+.input {
+  display: flex;
+  align-items: center;
 }
