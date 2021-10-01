@@ -5,11 +5,19 @@ const Card = ({ usersData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    setCurrentIndex(currentIndex + 1);
+    if (currentIndex < usersData.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      console.log("No more users next!");
+    }
   };
 
   const handlePrev = () => {
-    setCurrentIndex(currentIndex - 1);
+    if (currentIndex > 1) {
+      setCurrentIndex(currentIndex - 1);
+    } else {
+      console.log("No more previous users!");
+    }
   };
 
   const { name, city, country, title, employer, favoriteMovies } =
