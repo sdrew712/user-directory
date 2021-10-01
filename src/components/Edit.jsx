@@ -3,74 +3,63 @@ import BottomNav from "./BottomNav";
 
 const Edit = ({
   onEdit,
-  usersData,
-  currentIndex,
+  currentUser,
   handlePrev,
   handleNext,
-  editing,
+  setUsersData,
 }) => {
-  const { name, city, country, title, employer, favoriteMovies } =
-    usersData[currentIndex];
+  const { name, city, country, title, employer, favoriteMovies } = currentUser;
   const { first: firstName, last: lastName } = name;
   const [movie1, movie2, movie3] = favoriteMovies;
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submitted");
+    console.log(e);
+  };
+
   return (
     <div id="card-container">
-      <form id="card">
+      <form id="card" onSubmit={(e) => handleSubmit(e)}>
         <div className="input">
           <b>Name:</b>
-          <textarea
-            id="firstname-input"
-            cols={20}
-            rows={1}
-            placeholder={firstName}
-          ></textarea>
-          <textarea
-            id="lastname-input"
-            cols={20}
-            rows={1}
-            placeholder={lastName}
-          ></textarea>
+          <input id="firstname-input" value={firstName}></input>
+          <input id="lastname-input" value={lastName}></input>
         </div>
 
         <div id="user-info">
           <div className="input">
             <b>From: </b>
-            <textarea
-              id={city}
-              cols={20}
-              rows={1}
-              placeholder={city}
-            ></textarea>
-            <textarea cols={20} rows={1} placeholder={country}></textarea>
+            <input id={city} value={city}></input>
+            <input value={country}></input>
           </div>
 
           <div className="input">
             <b>Job Title: </b>
-            <textarea cols={30} rows={1} placeholder={title}></textarea>
+            <input value={title}></input>
           </div>
 
           <div className="input">
             <b>Employer: </b>
-            <textarea cols={30} rows={1} placeholder={employer}></textarea>
+            <input value={employer}></input>
           </div>
         </div>
         <div id="movies">
           <div>
             <b>Favorite Movies:</b>
           </div>
-          <li className="input">
-            <p>1.</p>
-            <textarea cols={30} rows={1} placeholder={movie1}></textarea>
-          </li>
-          <li className="input">
-            <p>2.</p>
-            <textarea cols={30} rows={1} placeholder={movie2}></textarea>
-          </li>
-          <li className="input">
-            <p>3.</p>
-            <textarea cols={30} rows={1} placeholder={movie3}></textarea>
-          </li>
+          <p className="input">
+            1.
+            <input value={movie1}></input>
+          </p>
+          <p className="input">
+            2.
+            <input value={movie2}></input>
+          </p>
+          <p className="input">
+            3.
+            <input value={movie3}></input>
+          </p>
         </div>
         <button>Submit</button>
       </form>
@@ -80,7 +69,7 @@ const Edit = ({
         onEdit={onEdit}
         onDelete={() => {}}
         onNew={() => {}}
-        EditActionText={editing ? "Cancel" : "Edit"}
+        editActionText={"Cancel"}
       />
     </div>
   );
